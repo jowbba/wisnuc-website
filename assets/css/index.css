@@ -40,4 +40,4 @@ summary, time, mark, audio, video {
 }
 mark { background: #ff0; }
 
-body {height:100%;}
+html, body {height:100%;}

@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 import css from 'Css/nav'
 class Nav extends React.Component {
   constructor() {
@@ -24,4 +25,10 @@ class Nav extends React.Component {
   }
 }
 
-module.exports = Nav
+var mapStateToProps = state => {
+  return {
+    view: state.view
+  }
+}
+
+export default connect(mapStateToProps)(Nav)
