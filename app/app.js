@@ -9,9 +9,11 @@ import Video from './components/video/video'
 import Support from './components/support/support'
 import Nav from './components/common/nav'
 import NoMatch from './components/nomatch/noMatch'
-import css from '../assets/css/index.css'
+import 'Font/font.css'
+import css from 'Css/index.css'
 import store from './store/store'
 import Action from './action/action'
+
 
 class App extends React.Component {
   constructor() {
@@ -19,23 +21,25 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    store.dispatch(Action.setSize(document.body.clientWidth, document.body.offsetHeight))
     window.onresize = function() {
       store.dispatch(Action.setSize(document.body.clientWidth, document.body.offsetHeight))
     }
 
     window.onscroll = (e) => {
-      console.log('scroll',document.documentElement.scrollTop, document.documentElement )
+      store.dispatch(Action.setScroll(document.body.scrollTop || document.documentElement.scrollTop))
+      
     }
   }
 
   render() {
     return (
-      <div className='index-wrap' style={{height: '4000px'}}>
+      <div className='index-wrap'>
         <Nav/>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/introduce' component={Introduce}/>
-          <Route path='/ws2i5i' component={Ws215i}/>
+          <Route path='/download' component={Ws215i}/>
           <Route path='/video' component={Video}/>
           <Route path='/support' component={Support}/>
           <Route component={NoMatch}/>

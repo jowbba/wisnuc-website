@@ -5,4 +5,11 @@ export default {
       width, height
     }
   },
+
+  setScroll(scrollTop) {
+    return {
+      type: 'SET_SCROLL',
+      scrollTop
+    }
+  }
 }

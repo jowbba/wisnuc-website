@@ -1,4 +1,216 @@
+
+
 #wrap {
   width:100%;
   height:100%;
+}
+
+/* home hero part */
+#hero {
+  background: #111517;
+  position: relative;
+}
+
+#cover_video {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: #111517;
+}
+
+#cover_video button {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 48px;
+  top: 48px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+#cover_video button span {
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 3px;
+  left: 16px;
+  transition: .25s ease-in-out,background-color .3s ease-out;
+  background-color: #fff;
+}
+
+#cover_video button span:first-child {transform: rotate(45deg)}
+#cover_video button span:last-child {transform: rotate(-45deg)}
+
+#cover_video video{
+  width: 100%;
+  height: 100%;
+}
+
+#hero_top {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  background: rgba(0,0,0,0);
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding:0 50px;
+  z-index: 90;
+  overflow: hidden;
+}
+
+#hero_top > img {
+  float: left;
+}
+
+#hero_top > div {
+  float: right;
+}
+
+#hero_item_left {
+  position: absolute;
+  left: 135px;
+  top: 360px;
+  z-index:90;
+  color: #fff;
+}
+
+#hero_left_text > p:nth-child(1) {font-size: 108px;}
+
+#hero_left_text > p:nth-child(2) {font-size: 58px;}
+
+#hero_item_right {
+  position: absolute;
+  z-index:90;
+  right: 400px;
+  top: 400px;
+}
+
+#btn_play {
+  width: 120px;
+  height: 120px;
+  background: transparent;
+  border:none;
+  cursor: pointer;
+}
+
+#btn_play:hover::before {
+  transform: scale(1.2);
+  border-color: #fff;
+}
+
+#btn_play::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  margin: -60px 0 0 -60px;
+  border-radius: 50%;
+  border: 4px solid rgb(0, 150, 136);
+  transition: background-color .3s ease,transform .3s ease,border-color .3s ease;
+  box-sizing: border-box;
+}
+
+#btn_play:hover::after {
+  border-left-color: #fff;
+}
+
+#btn_play::after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-left: 22px solid rgb(0, 150, 136);
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -16px 0 0 -7px;
+  transition: border-left-color .3s ease;
+}
+
+#hero_bg_video {
+  position: absolute;
+  overflow: hidden;
+}
+
+#hero_bg_video video{
+  z-index: 50;
+}
+
+#hero_bg_video div {
+  width: 100%;
+  height: 100%;
+  z-index: 60;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: rgba(0,0,0,.5)
+}
+
+
+/* home main content */
+.container {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+}
+
+.container > * {position: absolute}
+
+/* text in container */
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin:0 auto;
+  position: relative;
+  z-index: 90;
+}
+
+.title {
+  position: relative;
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.split-line {
+  background-color: #fff;
+  width: 40px;
+  height: 4px;
+  /* to fix */
+  margin: 15px 0; 
+}
+
+.detail {
+  font-size: 20px;
+}
+
+/* img in container */
+.container > img {
+  right: 0px;
+  bottom: 0px;
+}
+
+@media screen and (max-width: 1600px) {
+  .title {
+    font-size: 62px;
+  }
+
+  .container > img {
+    width: 1100px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .title {
+    font-size: 52px;
+  }
+
+  .container > img {
+    width: 900px;
+  }
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 // css 模块化 同类名 不影响
-import css from 'Css/one'
 class Introduce extends React.Component {
   constructor() {
     super()

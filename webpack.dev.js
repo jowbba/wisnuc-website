@@ -28,7 +28,9 @@ console.log(path.join(__dirname, 'public'))
   resolve: {
     alias: {
       Image: path.resolve(__dirname, 'assets/images'),
-      Css: path.resolve(__dirname, 'assets/css')
+      Css: path.resolve(__dirname, 'assets/css'),
+      Video: path.resolve(__dirname, 'assets/video'),
+      Font: path.resolve(__dirname, 'assets/fonts'),
     },
     extensions: ['.js', '.jsx', '.json', '.css']
   },
@@ -72,12 +74,27 @@ console.log(path.join(__dirname, 'public'))
         ]
       },
       {
-        test: /\.(png|jpg|jpeg|ico|gif|woff|woff2|ttf|eot|svg)$/,
+        test: /\.(png|jpg|jpeg|ico|gif|svg)$/,
         use: {
           loader: 'url-loader',
           options: {
             limit: 8192,
             name: 'images/[hash:8].[name].[ext]'
+          }
+        }
+      },
+      {
+        test: /\.(mp4)$/,
+        use: {
+          loader: 'file-loader',
+        }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: {
+          loader:'file-loader',
+          options: {
+            name: 'fonts/[hash:8].[name].[ext]'
           }
         }
       }
