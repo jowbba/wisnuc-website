@@ -12,16 +12,19 @@ class Content extends React.Component {
     let containerStyle = { backgroundColor, color }
     return (
       <section className={css.container} style={containerStyle}>
-        <article className={css.content} style={{top: infor.top}}>
-          <div className={css.title}>
-            {infor.title.map((item, index) => <p key={index}>{item}</p>)}
-          </div>
-          <div className={css['split-line']}/>
-          <div className={css.detail}>
-            {infor.subTitle.map((item, index) => <p key={index}>{item}</p>)}
-          </div>
-        </article>
-        <img src={infor.image} alt=""/>
+        <div>
+          <article className={css.content_text} style={{top: infor.top}}>
+            <div className={css.title}>
+              {infor.title.map((item, index) => <p key={index}>{item}</p>)}
+            </div>
+            <div className={css['split-line']}/>
+            <div className={css.detail}>
+              {infor.subTitle.map((item, index) => <p key={index}>{item}</p>)}
+            </div>
+            {infor.subImage?<img className={css.subImage} src={infor.subImage}/>:null}
+          </article>
+          <img className={css.content_img} src={infor.image}/>
+        </div>
       </section>
     )
   }

@@ -44,4 +44,11 @@ html, body {
     height:100%; 
     min-width: 1300px; 
     font-family: 'Noto Sans SC','Roboto';
+    cursor: default;
+    user-select: none; 
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }

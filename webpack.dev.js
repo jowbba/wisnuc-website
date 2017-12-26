@@ -31,6 +31,7 @@ console.log(path.join(__dirname, 'public'))
       Css: path.resolve(__dirname, 'assets/css'),
       Video: path.resolve(__dirname, 'assets/video'),
       Font: path.resolve(__dirname, 'assets/fonts'),
+      File: path.resolve(__dirname, 'assets/files')
     },
     extensions: ['.js', '.jsx', '.json', '.css']
   },
@@ -95,6 +96,15 @@ console.log(path.join(__dirname, 'public'))
           loader:'file-loader',
           options: {
             name: 'fonts/[hash:8].[name].[ext]'
+          }
+        }
+      },
+      {
+        test: /\.(dmg|exe|apk)/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'files/[name].[ext]'
           }
         }
       }

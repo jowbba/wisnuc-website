@@ -27,27 +27,27 @@ class Ws215i extends React.Component {
               <tr>
                 <td rowSpan="3">WISNUC 客户端</td>
                 <td>Windows 8或10</td>
-                <td><a href="http://120.27.108.153/download/doc/wisnuc-win-setup-1.2.15.zip">
+                <td><a href="http://www.wisnuc.com/files/wisnuc-setup-1.3.3.exe">
                   <img src={downIconImg} alt=""/>
-                  下载 wisnuc-win-setup-1.2.15.zip 
+                  下载 wisnuc-setup-1.3.3.exe
                 </a></td>
-                <td className={css.beizhu}>2017-11-23 最后更新</td>
+                <td className={css.beizhu}>2017-12-25 最后更新</td>
               </tr>
               <tr>
                 <td>Mac</td>
-                <td><a href="http://120.27.108.153/download/doc/wisnuc-darwin-x64-1.2.15.zip">
+                <td><a href="http://www.wisnuc.com/files/WISNUC-1.3.3.dmg">
                   <img src={downIconImg} alt=""/>
-                  下载 wisnuc-darwin-x64-1.2.15.zip 
+                  下载 WISNUC-1.3.3.dmg
                 </a></td>
-                <td>2017-11-23 最后更新</td>
+                <td>2017-12-25 最后更新</td>
               </tr>
               <tr>
                 <td>Android</td>
-                <td><a href="http://120.27.108.153/download/doc/wisnuc-android-1.2.37.zip">
+                <td><a href="http://www.wisnuc.com/files/wisnuc-v1.2.42-release.apk">
                   <img src={downIconImg} alt=""/>
-                  下载 wisnuc-android-1.2.37.zip
+                  下载 wisnuc-v1.2.42-release.apk
                 </a></td>
-                <td>2017-12-08 最后更新</td>
+                <td>2017-12-25 最后更新</td>
               </tr>
               
             </tbody>
