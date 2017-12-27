@@ -65,7 +65,7 @@ class Home extends React.Component {
             <div></div>
           </div>
         </div>
-        {contents.map((item, index) => <Content infor={Object.assign({}, item, contentStyle)} key={index}/>)}
+        {contents.map((item, index) => <Content infor={Object.assign({}, item, contentStyle)} key={index} index={index}/>)}
       </div>
     )
   }

@@ -1,9 +1,22 @@
 import React from 'react'
+import ReactDom from 'react-dom'
+import { connect } from 'react-redux'
 import css from 'Css/home'
 
 class Content extends React.Component {
   constructor() {
     super()
+    this.state = {show: false}
+  }
+
+  componentWillUpdate() {
+    // console.log(ReactDom.findDOMNode(this.refs.wrap).offsetTop, this.props.view.scrollTop)
+    if (this.props.view.scrollTop > ReactDom.findDOMNode(this.refs.wrap).offsetTop - 800) {
+      if (!this.state.show) {
+        this.setState({show: true})
+        console.log(this.props.index)
+      }
+    }
   }
 
   render() {
@@ -11,7 +24,7 @@ class Content extends React.Component {
     let { backgroundColor, color } = this.props.infor
     let containerStyle = { backgroundColor, color }
     return (
-      <section className={css.container} style={containerStyle}>
+      <section className={this.state.show?css.container + ' ' + css.up:css.container} style={containerStyle} ref='wrap'>
         <div>
           <article className={css.content_text} style={{top: infor.top}}>
             <div className={css.title}>
@@ -30,4 +43,10 @@ class Content extends React.Component {
   }
 }
 
-export default Content
+var mapStateToProps = state => {
+  return {
+    view: state.view
+  }
+}
+
+export default connect(mapStateToProps)(Content)

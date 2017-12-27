@@ -168,6 +168,14 @@
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
+  transition: transform 0.9s ease 0.15s, opacity 0.9s ease 0.15s;
+  opacity: 0;
+  transform: translateY(50px)
+}
+
+.up > div {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* text in content */
@@ -192,6 +200,14 @@
 
 .detail {
   font-size: 20px;
+  transition: transform 0.9s ease 0.15s, opacity 0.9s ease 0.15s;
+  opacity: 0;
+  transform: translateY(50px)
+}
+
+.up .detail {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* img in content */
@@ -203,6 +219,14 @@
 
 .subImage {
   margin-top: 20px;
+  transition: transform 1.2s ease 0.15s, opacity 1.2s ease 0.15s;
+  opacity: 0;
+  transform: translateY(50px)
+}
+
+.up .subImage {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 1600px) {

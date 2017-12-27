@@ -14,7 +14,6 @@ import css from 'Css/index.css'
 import store from './store/store'
 import Action from './action/action'
 
-
 class App extends React.Component {
   constructor() {
     super()
