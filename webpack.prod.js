@@ -12,7 +12,7 @@ console.log(path.join(__dirname, 'public'))
   entry: {
     app: path.join(__dirname, 'app', 'app.js'),
     // 提取第三方库
-    vendor: ['react', 'react-dom', 'react-router-dom']
+    vendor: ['react', 'react-dom', 'react-router-dom', 'react-redux', 'redux']
   },
   // 打包文件存储位置
   output: {

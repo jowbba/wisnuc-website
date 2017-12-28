@@ -12,7 +12,7 @@ console.log(path.join(__dirname, 'public'))
   entry: {
     app: path.join(__dirname, 'app', 'app.js'),
     // 提取第三方库
-    vendor: ['react', 'react-dom', 'react-router-dom']
+    vendor: ['react', 'react-dom', 'react-router-dom', 'react-redux', 'redux']
   },
   // 打包文件存储位置
   output: {
@@ -23,7 +23,7 @@ console.log(path.join(__dirname, 'public'))
     filename:  '[name].[hash:8].js'
   },
   // 映射 （方便调试）
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   // 定义解析
   resolve: {
     alias: {
@@ -127,8 +127,8 @@ console.log(path.join(__dirname, 'public'))
     // 如果是生产环境  注释HotModule outPut才能使用 chunkhash
     new webpack.HotModuleReplacementPlugin(),
     // 提取公共模块插件
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'vendor'
-    // })
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
+    })
   ],
  }

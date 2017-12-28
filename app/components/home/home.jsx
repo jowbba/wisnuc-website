@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import css from 'Css/home'
 import Content from './content'
+import Nav from '../common/nav'
 import contents from './contents'
 
 class Home extends React.Component {
@@ -26,6 +27,7 @@ class Home extends React.Component {
     let videoStyle = width/height > 1920/1080? {width: '100%'}: {height: '100%'}
     return (
       <div id={css.wrap}>
+        <Nav/>
         <header></header>
         <div id={css.hero} style={contentStyle}>
           {/* hero cover vide */}

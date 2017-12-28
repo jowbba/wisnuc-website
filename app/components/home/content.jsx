@@ -14,7 +14,6 @@ class Content extends React.Component {
     if (this.props.view.scrollTop > ReactDom.findDOMNode(this.refs.wrap).offsetTop - 800) {
       if (!this.state.show) {
         this.setState({show: true})
-        console.log(this.props.index)
       }
     }
   }

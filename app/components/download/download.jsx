@@ -1,10 +1,13 @@
-import { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Nav from '../common/nav'
+import Tab from './tab'
 import css from 'Css/download2'
-import logo from 'Image/logo.png'
+import logo from 'Image/download-icon.png'
+import files from './files'
 
-class Download extends Component {
+class Download extends React.Component {
   constructor() {
     super()
     this.state = {}
@@ -12,23 +15,14 @@ class Download extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{height: this.props.view.height, background: '#fafafa'}}>
         <header id={css.header}>
-          <nav id={css.nav}>
-            <div id={css.nav_content}>
-              <img src={logo} alt=""/>
-              <ul id={css.nav_list}>
-                <li><Link to='/'>软件介绍</Link></li>
-                <li><Link to='/download'>相关下载</Link></li>
-                <li><Link to='/' style={{color:'gray', cursor: ''}} >使用指南</Link></li>
-                <li><a href='http://bbs.wisnuc.com/forum.php'>论坛</a></li>
-              </ul>
-            </div>
-          </nav>
+          <Nav show={true} background='rgba(0,0,0,0)'/>
           <div id={css.title}>WISNUC客户端下载</div>
+          <img id={css.icon} src={logo} alt=""/>
         </header>
-        <div>
-          
+        <div id={css.content}>
+          {files.map((item, index) => <Tab infor={item} key={index}/>)}
         </div>
       </div>
     )

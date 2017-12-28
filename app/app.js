@@ -5,9 +5,9 @@ import { Provider } from 'react-redux'
 import Home from './components/home/home'
 import Introduce from './components/introduce/introduce'
 import Ws215i from './components/ws215i/ws215i'
+import Download from './components/download/download'
 import Video from './components/video/video'
 import Support from './components/support/support'
-import Nav from './components/common/nav'
 import NoMatch from './components/nomatch/noMatch'
 import 'Font/font.css'
 import css from 'Css/index.css'
@@ -34,11 +34,10 @@ class App extends React.Component {
   render() {
     return (
       <div className='index-wrap'>
-        <Nav/>
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/introduce' component={Introduce}/>
-          <Route path='/download' component={Ws215i}/>
+          <Route path='/download' component={Download}/>
           <Route path='/video' component={Video}/>
           <Route path='/support' component={Support}/>
           <Route component={NoMatch}/>
