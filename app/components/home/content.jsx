@@ -22,6 +22,7 @@ class Content extends React.Component {
     let infor = this.props.infor
     let { backgroundColor, color } = this.props.infor
     let containerStyle = { backgroundColor, color }
+    let splitLineStyle = this.props.index % 2 == 0? {backgroundColor:'#fff'}: {backgroundColor:'#000'}
     return (
       <section className={this.state.show?css.container + ' ' + css.up:css.container} style={containerStyle} ref='wrap'>
         <div>
@@ -29,7 +30,7 @@ class Content extends React.Component {
             <div className={css.title}>
               {infor.title.map((item, index) => <p key={index}>{item}</p>)}
             </div>
-            <div className={css['split-line']}/>
+            <div className={css['split-line']} style={splitLineStyle}/>
             <div className={css.detail}>
               {infor.subTitle.map((item, index) => <p key={index}>{item}</p>)}
             </div>

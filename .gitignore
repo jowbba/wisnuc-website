@@ -3,3 +3,6 @@ node_modules/
 public/
 assets/video
 files/
+.DS_Store
+app/.DS_Store
+assets/.DS_Store
