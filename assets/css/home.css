@@ -3,7 +3,77 @@
 #wrap {
   width:100%;
   height:100%;
+  position: relative;
 }
+
+/* top bar */
+#hero_top {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  background: rgba(0,0,0,0);
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding:0 50px;
+  z-index: 110;
+  overflow: hidden;
+}
+
+#hero_top > img {
+  float: left;
+}
+
+#navbar__opener {
+  width: 32px;
+  height: 48px;
+  /* top:15px; */
+  right: 50px;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+
+#navbar__opener:hover > span {
+  background-color: #ef0d33;
+}
+
+#navbar__opener > span {
+  width: 32px;
+  height: 3px;
+  transition: transform .3s ease-out, background-color .3s ease-in-out;
+  position: absolute;
+  background: #fff;
+}
+
+#navbar__opener > span:first-child {top:13px;}
+#navbar__opener > span:nth-child(2) {top: 21px;}
+#navbar__opener > span:nth-child(3) {top: 21px;}
+#navbar__opener > span:last-child {top: 29px;}
+
+#navbar__opener.close_btn > span:first-child { width: 0px;}
+#navbar__opener.close_btn > span:nth-child(2) {transform: rotate(45deg)}
+#navbar__opener.close_btn > span:nth-child(3) {transform: rotate(-45deg)}
+#navbar__opener.close_btn > span:last-child {width: 0px;}
+
+#hero_top > div {
+  float: right;
+}
+
+#menu {
+  padding-top: 6.875rem;
+  margin-left: 60%; 
+}
+
+.menu_link {
+  color: #fff;
+  font-size: 60px;
+  /* font-weight: 600; */
+}
+
+/* .menu_link:hover {
+  color: #ef0d33
+} */
 
 /* home hero part */
 #hero {
@@ -46,27 +116,6 @@
 #cover_video video{
   width: 100%;
   height: 100%;
-}
-
-#hero_top {
-  position: absolute;
-  top: 15px;
-  left: 0px;
-  background: rgba(0,0,0,0);
-  width: 100%;
-  height: 50px;
-  box-sizing: border-box;
-  padding:0 50px;
-  z-index: 90;
-  overflow: hidden;
-}
-
-#hero_top > img {
-  float: left;
-}
-
-#hero_top > div {
-  float: right;
 }
 
 #hero_item_left {
@@ -142,6 +191,15 @@
 
 #hero_bg_video video{
   z-index: 50;
+}
+
+/* hero navbar cover */
+#navbar {
+  width: 100%;
+  height: 100%;
+  background-color: #111517;
+  position: fixed;
+  z-index: 110;
 }
 
 #hero_bg_video div {
