@@ -11,5 +11,24 @@ export default {
       type: 'SET_SCROLL',
       scrollTop
     }
+  },
+
+  openMenu() {
+    return {
+      type: 'OPEN_MENU'
+    }
+  },
+
+  closeMenu() {
+    return {
+      type: 'CLOSE_MENU'
+    }
+  },
+
+  setTutorial(part, line) {
+    return {
+      type: 'SET_TUTORIAL',
+      part, line
+    }
   }
 }

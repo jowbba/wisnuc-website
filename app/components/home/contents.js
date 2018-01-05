@@ -65,11 +65,19 @@ export default [
     top: '210px'
   },
   {
-    title: ['简单完善的权限管理机制'],
-    subTitle: ['WISNUC系统提供完善的权限管理机制,', '创新性的共享空间兼顾了文件的私密与简易共享。'],
+    title: ['提供完整的私人云盘体验'],
+    subTitle: ['WISNUC系统帮助您建立专属于自己的私人云盘,', '文件上传下载，管理，分享，WISNUC提供了完整的云盘体验，', '更重要的是这是属于您自己的私人云盘。'],
     backgroundColor: '#ffc107',
-    image: require('Image/content9.png'),
+    image: require('Image/9.png'),
     color: '#fff',
     top: '310px'
-  }
+  },
+  {
+    title: ['权限管理', '兼顾私密性和共享空间'],
+    subTitle: ['简单完善的权限管理机制', 'WISNUC系统提供完善的权限管理机制，创新性的共享空间兼顾了文件的私密与简易共享。'],
+    backgroundColor: '#fafafa',
+    image: require('Image/10.png'),
+    color: 'rgba(0,0,0,.87)',
+    top: '210px'
+  },
 ]

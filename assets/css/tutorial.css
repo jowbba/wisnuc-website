@@ -1,0 +1,139 @@
+/* left navigation */
+#leftnav_container {
+  border-right: 1px solid rgba(0,0,0,.14);
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: #212121;
+  background: #fff;
+  width: 256px;
+  height: 100%;
+  z-index: 110;
+  transition-delay: .1s;
+  transition-duration: .2s;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(.4,0,.2,1); 
+}
+
+#leftnav_container > div {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 96px;
+  font-size: 13px;
+}
+
+#leftnav_title {
+  padding: 12px 0 11px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.list > div {
+  overflow: hidden;
+  transition: height .5s;
+}
+
+#leftnav_container dt{
+  padding: 15px 0 15px 22px;
+  font-weight: 700;
+  line-height: 13px;
+  cursor: pointer;
+}
+
+#leftnav_container dt.focus {
+  background: #eee;
+}
+
+#leftnav_container dd {
+  padding: 10px 10px 10px 46px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 13px;
+  cursor: pointer;
+  transition: top .5s;
+  position:relative;
+}
+
+/* mask cover */
+#mask_cover {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  z-index: 100;
+  visibility: hidden;
+}
+
+#mask_cover.visible {
+  visibility: visible;
+}
+
+#mask_cover.invisible {
+  /* visibility: hidden; */
+  animation-name: invisible;
+  animation-duration: .3s;
+}
+
+/* content header */
+#header {
+  width: 100%;
+  height: 256px;
+  position: fixed;
+  left: 0px; 
+  top: -192px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+
+.toggle_button {
+  white-space: pre-wrap;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  position: fixed;
+  left: 12px;
+  top: 8px;
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 48px;
+  text-align: center;
+}
+
+.toggle_button > img {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#header_title {
+  height: 64px;
+  line-height: 64px;
+  position: absolute;
+  left: 72px;
+  bottom: 0px;
+  color: #fff;
+}
+
+#content {
+  width: 100%;
+}
+
+.open {
+  transform: translateX(0px);
+}
+
+.close {
+  transform: translateX(-100%);
+}
+
+/* content body */
+
+@keyframes invisible {
+  0% {visibility: visible; }
+  90% {visibility: visible; }
+  100% {visibility: hidden}
+}
+
