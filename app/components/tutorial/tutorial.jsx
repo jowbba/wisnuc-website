@@ -21,8 +21,9 @@ class Tutorial extends React.Component {
     let { width, height } = view
     let { toggle, part, line } = tutorial
     let menu = tutorials[part]
-    let subMenu = menu.subContent[line]
+    let contentObj = menu.subContent[line]
     let headerStyle = {background: menu.bgColor}
+
     return (
       <div style={{width, height}}>
         {/* left nav */}
@@ -44,6 +45,9 @@ class Tutorial extends React.Component {
             </div>
           </nav>
           {/* content body */}
+          <div>
+            
+          </div>
         </div>
       </div>
     )

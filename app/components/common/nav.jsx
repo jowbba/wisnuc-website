@@ -28,7 +28,7 @@ class Nav extends React.Component {
           <ul>
             <li><Link to='/'>软件介绍</Link></li>
             <li><Link to='/download'>相关下载</Link></li>
-            <li><Link to='/tutorial' style={{cursor: 'not-allowed'}}>使用指南</Link></li>
+            <li><Link to='/' style={{cursor: 'not-allowed'}}>使用指南</Link></li>
             <li><a href='http://bbs.wisnuc.com/forum.php'>论坛</a></li>
           </ul>
         </div>

@@ -43,6 +43,7 @@ class Row extends React.Component {
   }
 
   selectRow(part, line) {
+    store.dispatch(Action.closeMenu())
     store.dispatch(action.setTutorial(part, line))
   }
 
