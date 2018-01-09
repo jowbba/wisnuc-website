@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Leftnav from './leftnav'
+import Content from './content'
 import css from 'Css/tutorial'
 import tutorials from './tutorial.js'
 import store from '../../store/store'
@@ -21,8 +22,9 @@ class Tutorial extends React.Component {
     let { width, height } = view
     let { toggle, part, line } = tutorial
     let menu = tutorials[part]
-    let contentObj = menu.subContent[line]
-    let headerStyle = {background: menu.bgColor}
+    let contentObj = menu.content[line]
+    let bgStyle = {background: menu.bgColor}
+    let colorStyle = {color: menu.bgColor}
 
     return (
       <div style={{width, height}}>
@@ -36,7 +38,7 @@ class Tutorial extends React.Component {
         {/* content */}
         <div id={css.content}>
           {/* content header */}
-          <header id={css.header} style={headerStyle}>
+          <header id={css.header} style={bgStyle}>
             <div id={css.header_title}>{menu.title} - {menu.subTitle[line]}</div>
           </header>
           <nav id={css.navbar}>
@@ -45,8 +47,21 @@ class Tutorial extends React.Component {
             </div>
           </nav>
           {/* content body */}
-          <div>
-            
+          <div className={css.content_wrap}>
+            {/* content title */}
+            <h1 style={colorStyle} className={css.content_title}>{contentObj.title}</h1>
+            {/* content description */}
+            {contentObj.desrciption && <h2 className={css.content_description}>{contentObj.desrciption}</h2> }
+            {/* content  */}
+            <nav className={css.chapter_toc} style={{borderLeftColor: menu.bgColor}}>
+              <h1>Contents</h1>
+              <ul>
+                {contentObj.subContent.map((item, index) => (
+                 <li key={index}><a href={'#' + 'anchor' + index} style={colorStyle}>{item.articleTitle}</a></li>
+                ))}
+              </ul>
+            </nav>
+            {contentObj.subContent.map((item, index) => <Content key={index} index={index} infor={Object.assign({},item, colorStyle)}/>)}
           </div>
         </div>
       </div>
