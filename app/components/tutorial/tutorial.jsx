@@ -17,14 +17,18 @@ class Tutorial extends React.Component {
     
   }
 
+  componentWillReceiveProps(nextprops) {
+    // console.log(nextprops)
+  }
+
   render() {
-    let { view, tutorial } = this.props
-    let { width, height } = view
+    let { view, tutorial, width, height } = this.props
     let { toggle, part, line } = tutorial
     let menu = tutorials[part]
     let contentObj = menu.content[line]
     let bgStyle = {background: menu.bgColor}
     let colorStyle = {color: menu.bgColor}
+
 
     return (
       <div style={{width, height}}>
@@ -80,8 +84,9 @@ class Tutorial extends React.Component {
 
 var mapStateToProps = state => {
   return {
-    view: state.view,
-    tutorial: state.tutorial
+    tutorial: state.tutorial,
+    width: state.view.width,
+    height: state.view.height
   }
 }
 

@@ -19,23 +19,15 @@ export default [
               // each object is a colume(text, image, video)
               {
                 type: 'text',
+                content: ['this is example of text, this is example of text, this is example of text','this is example of text, this is example of text, this is example of text','this is example of text, this is example of text, this is example of text'],
                 colume: 1,
-                content: ['this is example of text, this is example of text, this is example of text']
-              },
-
-              {
-                type: 'text',
-                colume: 1,
-                content: [
-                  'this is example of text, this is example of text, this is example of text',
-                  'this is example of text, this is example of text, this is example of text'
-                ]
               },
 
               {
                 type: 'image',
-                src: '',
-                des: ''
+                src: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515495029999&di=4afed8f5dbc5a8b5c7a7f373fa3408ef&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201601%2F18%2F194640qn93322qq79wubw0.png',
+                des: '',
+                colume: 2,
               }
               
             ],
@@ -43,23 +35,24 @@ export default [
               // each object is a colume(text, image, video)
               {
                 type: 'text',
+                content: ['this is example of text, this is example of text, this is example of text'],
                 colume: 1,
-                content: ['this is example of text, this is example of text, this is example of text']
               },
 
               {
                 type: 'text',
-                colume: 1,
                 content: [
                   'this is example of text, this is example of text, this is example of text',
                   'this is example of text, this is example of text, this is example of text'
-                ]
+                ],
+                colume: 1
               },
 
               {
                 type: 'image',
-                src: '',
-                des: ''
+                src: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515495029999&di=4afed8f5dbc5a8b5c7a7f373fa3408ef&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201601%2F18%2F194640qn93322qq79wubw0.png',
+                des: '',
+                colume: 1
               }
               
             ],
@@ -72,15 +65,22 @@ export default [
               {
                 type: 'text',
                 colume: 1,
-                content: 'this is example of text, this is example of text, this is example of text'
+                content: ['this is example of text, this is example of text, this is example of text']
               },
+
+              {
+                type: 'video',
+                src: 'http://www.wisnuc.com/videos/home_bg.mp4',
+                colume: 2
+                
+              }
 
             ],
             [
               {
                 type: 'text',
                 colume: 1,
-                content: 'this is example of text, this is example of text, this is example of text'
+                content: ['this is example of text, this is example of text, this is example of text']
               }
             ]
           ]

@@ -8,12 +8,14 @@ class Content extends React.Component {
   }
 
   render() {
-    console.log(this.props.infor)
     let { infor, index } = this.props
+    let colorStyle = {color: infor.color}
+
     return(
       <div id={'anchor'+ index}>
+        <h2 className={css.article_title} style={colorStyle}>{infor.articleTitle}</h2>
         {infor.parts.map((item, index) => (
-          <ContentRow key={index} index={index} infor={item}/>
+          <ContentRow key={index} index={index} columes={item}/>
         ))}
       </div>
     )

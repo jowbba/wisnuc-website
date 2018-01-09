@@ -8,13 +8,14 @@ class ContentRow extends React.Component {
   }
 
   render() {
-    let { infor } = this.props
+    let { columes } = this.props
+    let columeCount = columes.reduce((previous, current, index, arr) => previous + current.colume, 0)
     return(
-      <div className={css.content_row}>
-        {infor.map((item, index) => (
-          <ContentColume key={index} infor={item} />
+      <section className={css.content_row}>
+        {columes.map((item, index) => (
+          <ContentColume key={index} infor={item} columeCount={columeCount} />
         ))}
-      </div>
+      </section>
     )
   }
 }
