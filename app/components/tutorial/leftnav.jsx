@@ -1,5 +1,5 @@
 import React from 'react'
-import Row from './row'
+import NavRow from './navRow'
 import css from 'Css/tutorial'
 
 class Leftnav extends React.Component {
@@ -20,7 +20,7 @@ class Leftnav extends React.Component {
           {/* list */}
           <nav>
             {this.props.tutorials.map((tutorial,index) => 
-              <Row key={index} tutorial={tutorial} index={index} part={part} line={line}
+              <NavRow key={index} tutorial={tutorial} index={index} part={part} line={line}
                 isFocus={this.state.focus == index} isSelected={part == index} bgColor={tutorial.bgColor}
                 focus={this.focus.bind(this)}
             />)}

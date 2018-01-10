@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import Leftnav from './leftnav'
-import Content from './content'
+import ContentSection from './contentSection'
 import css from 'Css/tutorial'
 import tutorials from './tutorial.js'
 import store from '../../store/store'
@@ -28,8 +29,7 @@ class Tutorial extends React.Component {
     let contentObj = menu.content[line]
     let bgStyle = {background: menu.bgColor}
     let colorStyle = {color: menu.bgColor}
-
-
+    let p = part.toString() + line.toString()
     return (
       <div style={{width, height}}>
         {/* left nav */}
@@ -43,7 +43,15 @@ class Tutorial extends React.Component {
         <div id={css.content}>
           {/* content header */}
           <header id={css.header} style={bgStyle}>
-            <div id={css.header_title}>{menu.title} - {menu.subTitle[line]}</div>
+            <div id={css.header_title}>{menu.subTitle[line]}</div>
+            <div id={css.header_nav}>
+              <ul>
+                <li><Link to='/'>软件介绍</Link></li>
+                <li><Link to='/download'>相关下载</Link></li>
+                <li><Link to='/tutorial'>使用指南</Link></li>
+                <li><a href='http://bbs.wisnuc.com/forum.php'>论坛</a></li>
+              </ul>
+            </div>
           </header>
           <nav id={css.navbar}>
             <div className={css.toggle_button} onClick={this.openMenu.bind(this)}>
@@ -57,15 +65,17 @@ class Tutorial extends React.Component {
             {/* content description */}
             {contentObj.desrciption && <h2 className={css.content_description}>{contentObj.desrciption}</h2> }
             {/* content  */}
-            <nav className={css.chapter_toc} style={{borderLeftColor: menu.bgColor}}>
-              <h1>Contents</h1>
+            {false && <nav className={css.chapter_toc} style={{borderLeftColor: menu.bgColor}}>
+              <h1>内容</h1>
               <ul>
                 {contentObj.subContent.map((item, index) => (
                  <li key={index}><a href={'#' + 'anchor' + index} style={colorStyle}>{item.articleTitle}</a></li>
                 ))}
               </ul>
-            </nav>
-            {contentObj.subContent.map((item, index) => <Content key={index} index={index} infor={Object.assign({},item, colorStyle)}/>)}
+            </nav>}
+            {/* section */}
+            {contentObj.subContent.map((item, index) => 
+            <ContentSection key={p+index} position={p+index} index={index} infor={Object.assign({},item,colorStyle)}/>)}
           </div>
         </div>
       </div>

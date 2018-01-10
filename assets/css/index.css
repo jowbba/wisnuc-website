@@ -42,7 +42,7 @@ mark { background: #ff0; }
 
 html, body {
     height:100%; 
-    min-width: 1300px; 
+    /* min-width: 1300px;  */
     font-family: 'Noto Sans SC','Roboto';
     cursor: default;
     user-select: none; 

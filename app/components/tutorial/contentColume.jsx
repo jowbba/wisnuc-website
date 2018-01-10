@@ -25,6 +25,7 @@ class ContentColume extends React.Component {
             <source src={infor.src} type='video/mp4'/>
           </video>
         )}
+        {this.props.position}
       </div>
     )
   }
