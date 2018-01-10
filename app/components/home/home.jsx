@@ -37,7 +37,7 @@ class Home extends React.Component {
             <ul>
               <li><Link to='/' className={css.menu_link} style={{color: '#ef0d33'}}><span/>软件介绍</Link></li>
               <li><Link to='/download' className={css.menu_link}><span/>相关下载</Link></li>
-              <li><Link to='/' className={css.menu_link} style={{cursor: 'not-allowed'}}><span/>使用指南</Link></li>
+              <li><Link to='/tutorial' className={css.menu_link}><span/>使用指南</Link></li>
               <li><a href='http://bbs.wisnuc.com/forum.php' className={css.menu_link}><span/>论坛</a></li>
             </ul>
           </nav>
