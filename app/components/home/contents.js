@@ -1,11 +1,12 @@
 export default [
   {
     title: ['WISNUC系统', '个人私有云新体验'],
-    subTitle: ['多设备，跨平台，让您随时随地，方便快捷地管理您的数据。'],
+    subTitle: ['多设备，跨平台，让您随时随地，', '方便快捷地管理您的数据。'],
     backgroundColor: '#009788',
     image: require('Image/content1.png'),
     color: '#fff',
     top: '310px',
+    topDistance: 'long_distance',
     subImage: require('Image/content1_1.png')
   },
   {
@@ -14,7 +15,8 @@ export default [
     backgroundColor: '#fafafa',
     image: require('Image/content2.png'),
     color: 'rgba(0,0,0,.87)',
-    top: '310px'
+    top: '310px',
+    topDistance: 'long_distance'
   },
   {
     title: ['为您的家人朋友', '轻松创建账号'],
@@ -22,7 +24,8 @@ export default [
     backgroundColor: '#8bc34a',
     image: require('Image/content3.png'),
     color: '#fff',
-    top: '310px'
+    top: '310px',
+    topDistance: 'long_distance'
   },
   {
     title: ['微信文件 一键转存', '永不过期'],
@@ -30,7 +33,8 @@ export default [
     backgroundColor: '#fafafa',
     image: require('Image/content4.png'),
     color: 'rgba(0,0,0,.87)',
-    top: '310px'
+    top: '310px',
+    topDistance: 'long_distance'
   },
   {
     title: ['自动备份手机内照片、视频', '为您留住每一段美好回忆'],
@@ -38,7 +42,8 @@ export default [
     backgroundColor: '#512da8',
     image: require('Image/content5.png'),
     color: '#fff',
-    top: '210px'
+    top: '210px',
+    topDistance: 'mid_distance'
   },
   {
     title: ['为家庭影音中心而设计的系统', '为您打造私人家庭影院'],
@@ -46,7 +51,8 @@ export default [
     backgroundColor: '#fafafa',
     image: require('Image/content6.png'),
     color: 'rgba(0,0,0,.87)',
-    top: '180px'
+    top: '180px',
+    topDistance: 'short_distance'
   },
   {
     title: ['随时随地想下载就下载', '到家即可观看'],
@@ -54,7 +60,8 @@ export default [
     backgroundColor: '#03a9f4',
     image: require('Image/content7.png'),
     color: '#fff',
-    top: '210px'
+    top: '210px',
+    topDistance: 'mid_distance'
   },
   {
     title: ['多种磁盘阵列(RAID)模式可供挑选', '兼顾硬盘使用效率和安全'],
@@ -62,7 +69,8 @@ export default [
     backgroundColor: '#fafafa',
     image: require('Image/content8.png'),
     color: 'rgba(0,0,0,.87)',
-    top: '210px'
+    top: '210px',
+    topDistance: 'mid_distance'
   },
   {
     title: ['提供完整的私人云盘体验'],
@@ -70,14 +78,16 @@ export default [
     backgroundColor: '#ffc107',
     image: require('Image/9.png'),
     color: '#fff',
-    top: '310px'
+    top: '310px',
+    topDistance: 'long_distance'
   },
   {
     title: ['权限管理', '兼顾私密性和共享空间'],
-    subTitle: ['简单完善的权限管理机制', 'WISNUC系统提供完善的权限管理机制，创新性的共享空间兼顾了文件的私密与简易共享。'],
+    subTitle: ['简单完善的权限管理机制', 'WISNUC系统提供完善的权限管理机制，', '创新性的共享空间兼顾了文件的私密与简易共享。'],
     backgroundColor: '#fafafa',
     image: require('Image/10.png'),
     color: 'rgba(0,0,0,.87)',
-    top: '210px'
+    top: '210px',
+    topDistance: 'mid_distance'
   },
 ]

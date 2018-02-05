@@ -26,7 +26,7 @@ class NavRow extends React.Component {
     let ddSelectStyle = {color: bgColor}
 
     // 二级菜单暂时不用 ，隐藏主title ，每个二级菜单只有一个元素 且作为以及菜单列表
-    // 下面隐藏一级菜单 （心痛）
+    // 下面隐藏一级菜单 
     dtStyle = Object.assign(dtStyle, {display: 'none'})
     ddContStyle = Object.assign(ddContStyle, {height: containerHeight + 'px'})
     ddStyle = Object.assign(ddStyle, {padding:'15px 10px 15px 26px', top: '0px'})

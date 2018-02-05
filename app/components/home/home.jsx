@@ -15,14 +15,6 @@ class Home extends React.Component {
     }
   }
 
-  componentDidMount() {
-
-  }
-
-  componentWillReceiveProps(nextProps) {
-    
-  }
-
   render() {
     let { width, height } = this.props.view
     let contentStyle = { width, height }

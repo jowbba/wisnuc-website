@@ -10,12 +10,10 @@ class Content extends React.Component {
   }
 
   componentWillUpdate() {
-    // console.log(ReactDom.findDOMNode(this.refs.wrap).offsetTop, this.props.view.scrollTop)
-    if (this.props.view.scrollTop > ReactDom.findDOMNode(this.refs.wrap).offsetTop - 800) {
-      if (!this.state.show) {
-        this.setState({show: true})
-      }
-    }
+    // calculate scroll top && show transform 
+    let sTop = this.props.view.scrollTop
+    let contentPosition = ReactDom.findDOMNode(this.refs.wrap).offsetTop - 800
+    if (sTop > contentPosition && !this.state.show) this.setState({show: true})
   }
 
   render() {
@@ -26,17 +24,21 @@ class Content extends React.Component {
     return (
       <section className={this.state.show?css.container + ' ' + css.up:css.container} style={containerStyle} ref='wrap'>
         <div>
-          <article className={css.content_text} style={{top: infor.top}}>
+          {/* text in content */}
+          <article className={css.content_text + ' ' + css[infor.topDistance]}>
+            {/* title */}
             <div className={css.title}>
               {infor.title.map((item, index) => <p key={index}>{item}</p>)}
             </div>
             <div className={css['split-line']} style={splitLineStyle}/>
+            {/* description */}
             <div className={css.detail}>
               {infor.subTitle.map((item, index) => <p key={index}>{item}</p>)}
             </div>
             {infor.subImage?<img className={css.subImage} src={infor.subImage}/>:null}
           </article>
-          <img className={css.content_img} src={infor.image}/>
+          {/* img in content */}
+          <img className={css.content_img + ' ' + css[infor.topDistance]} src={infor.image}/>
         </div>
       </section>
     )
