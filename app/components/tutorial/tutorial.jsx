@@ -14,12 +14,8 @@ class Tutorial extends React.Component {
     this.state = {}
   }
 
-  componentDidMount() {
-    
-  }
-
-  componentWillReceiveProps(nextprops) {
-    // console.log(nextprops)
+  componentWillMount() {
+    document.body.style = ''
   }
 
   render() {
@@ -44,14 +40,14 @@ class Tutorial extends React.Component {
           {/* content header */}
           <header id={css.header} style={bgStyle}>
             <div id={css.header_title}>{menu.subTitle[line]}</div>
-            <div id={css.header_nav}>
+            {this.props.width > 775?<div id={css.header_nav}>
               <ul>
                 <li><Link to='/'>软件介绍</Link></li>
                 <li><Link to='/download'>相关下载</Link></li>
                 <li><Link to='/tutorial'>使用指南</Link></li>
                 <li><a href='http://bbs.wisnuc.com/forum.php'>论坛</a></li>
               </ul>
-            </div>
+            </div>:null}
           </header>
           <nav id={css.navbar}>
             <div className={css.toggle_button} onClick={this.openMenu.bind(this)}>

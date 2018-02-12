@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import css from 'Css/nav'
 import logo from 'Image/logo.png'
+
 class Nav extends React.Component {
   constructor() {
     super()

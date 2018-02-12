@@ -1,10 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import store from '../../store/store'
+import Action from '../../action/action'
 import css from 'Css/home'
 import Content from './content'
 import Nav from '../common/nav'
 import contents from './contents'
+import NavbarMenu from '../common/navbarMenu'
 
 class Home extends React.Component {
   constructor() {
@@ -13,6 +16,10 @@ class Home extends React.Component {
       videoCover: false,
       navbar : false
     }
+  }
+
+  componentWillMount() {
+    document.body.style = ''
   }
 
   render() {
@@ -24,28 +31,7 @@ class Home extends React.Component {
         {/* nav */}
         <Nav/>
         {/* navbar menu cover */}
-        {this.state.navbar?<div id={css.navbar}>
-          <nav id={css.menu}>
-            <ul>
-              <li><Link to='/' className={css.menu_link} style={{color: '#ef0d33'}}><span/>软件介绍</Link></li>
-              <li><Link to='/download' className={css.menu_link}><span/>相关下载</Link></li>
-              <li><Link to='/tutorial' className={css.menu_link}><span/>使用指南</Link></li>
-              <li><a href='http://bbs.wisnuc.com/forum.php' className={css.menu_link}><span/>论坛</a></li>
-            </ul>
-          </nav>
-        </div>:null}
-        {/* hero top bar */}
-        <div id={css.hero_top}>
-          <img src={require('Image/logo.png')} alt=""/>
-          <div href="#" id={css.navbar__opener} className={this.state.navbar?css.close_btn:''} 
-            onClick={this.toggleNavbar.bind(this)}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        
+        <NavbarMenu index={0}/>
         {/* hero */}
         <div id={css.hero} style={contentStyle}>
           {/* hero cover vide */}
@@ -89,12 +75,6 @@ class Home extends React.Component {
 
   closeVideo() {
     this.setState({ videoCover: false})
-  }
-
-  toggleNavbar() {
-    if (this.state.navbar) document.body.style = ''
-    else document.body.style = 'overflow:hidden;'
-    this.setState({ navbar: !this.state.navbar})
   }
 }
 

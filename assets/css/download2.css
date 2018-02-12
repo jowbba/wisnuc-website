@@ -24,16 +24,20 @@
 }
 
 #content {
-  width: 1280px;
+  max-width: 1280px;
   position: relative;
   margin: 0 auto;
   top: -62px;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
 }
 
 .tab {
-  width: 420px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 420px;
   margin-right: 10px;
   background: #fff;
   padding-left: 80px;
@@ -80,4 +84,14 @@
   color: #fff;
   display: block;
   border-radius: 2px;
+}
+
+@media screen and (max-width: 850px){
+  .tab { margin-right: 0px }
+
+  #title { font-size: 41px }
+}
+
+@media screen and (max-width: 420px){
+  #title { font-size: 30px }
 }

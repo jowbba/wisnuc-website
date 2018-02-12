@@ -68,7 +68,6 @@
 .menu_link {
   color: #fff;
   font-size: 60px;
-  /* font-weight: 600; */
 }
 
 /* .menu_link:hover {
@@ -120,8 +119,9 @@
 
 #hero_item_left {
   position: absolute;
-  left: 135px;
-  top: 360px;
+  left: 15%;
+  /* top: 360px; */
+  top: 55%;
   z-index:90;
   color: #fff;
 }
@@ -134,7 +134,6 @@
   display: none;
   position: absolute;
   z-index:90;
-  /* right: 400px; */
   left: 532px;
   top: 400px;
 }
@@ -199,6 +198,7 @@
   height: 100%;
   background-color: #111517;
   position: fixed;
+  top: 0px;
   z-index: 110;
 }
 
@@ -282,10 +282,11 @@
   right: 0px;
   top: 0px;
   position: absolute;
-  z-index: 80px;
+  z-index: 80;
 }
 
 .subImage {
+  z-index: 70;
   margin-top: 20px;
   transition: transform 1.2s ease 0.15s, opacity 1.2s ease 0.15s;
   opacity: 0;
@@ -300,71 +301,87 @@
 
 
 @media screen and (max-width: 1600px) {
-  .title { font-size: 62px; }
+  .title { font-size: 62px }
 
-  .detail { font-size: 18.8px;}
+  .detail { font-size: 18.8px }
 
-  #hero_left_text > p:nth-child(1) {font-size: 97px;}
+  #hero_left_text > p:nth-child(1) { font-size: 97px }
 
-  #hero_left_text > p:nth-child(2) {font-size: 52px;}
+  #hero_left_text > p:nth-child(2) { font-size: 52px }
+
+  .menu_link { font-size: 54px }
 }
 
 @media screen and (max-width: 1366px) {
-  .title { font-size: 52px; }
+  .title { font-size: 52px }
 
-  .detail { font-size: 15.8px;}
+  .detail { font-size: 15.8px}
 
-  .content_img { width: 650px; }
+  .content_img { width: 650px }
 
-  .container { height: 863px; }
-
-  .content_text.long_distance { top: 270px; }
+  .container { height: 863px }
   
-  .content_text.mid_distance { top: 170px; }
+  .subImage { width: 325px }
+
+  .content_text.long_distance { top: 270px }
   
-  .content_text.short_distance { top: 140px; }
+  .content_text.mid_distance { top: 170px }
+  
+  .content_text.short_distance { top: 140px }
 
-  #hero_left_text > p:nth-child(1) {font-size: 89px;}
+  #hero_left_text > p:nth-child(1) {font-size: 89px }
 
-  #hero_left_text > p:nth-child(2) {font-size: 47px;}
+  #hero_left_text > p:nth-child(2) {font-size: 47px }
 
-
+  .menu_link { font-size: 49px }
 }
 
 @media screen and (max-width: 1080px) {
-  .title { font-size: 42px;}
+  .title { font-size: 42px }
 
-  .detail { font-size: 15px;}
+  .detail { font-size: 15px }
 
-  .content_img { width: 520px; }
+  .content_img { width: 520px }
 
-  .container { height: 690px; }
+  .container { height: 690px }
 
-  .content_text.long_distance { top: 215px; }
+  .subImage { width: 300px }
+
+  .content_text.long_distance { top: 215px }
   
-  .content_text.mid_distance { top: 115px; }
+  .content_text.mid_distance { top: 115px }
   
-  .content_text.short_distance { top: 85px; }
+  .content_text.short_distance { top: 85px }
 
-  #hero_left_text > p:nth-child(1) {font-size: 80px;}
+  #hero_left_text > p:nth-child(1) {font-size: 80px }
 
-  #hero_left_text > p:nth-child(2) {font-size: 42px;}
+  #hero_left_text > p:nth-child(2) {font-size: 42px }
+
+  menu_link { font-size: 44px }
 }
 
 @media screen and (max-width: 900px) {
-  .title { font-size: 32px;}
+  .title { font-size: 32px }
 
-  .detail { font-size: 15px;}
+  .detail { font-size: 15px }
 
-  .content_img { width: 450px; }
+  .content_img { width: 450px }
 
-  .container { height: 597px; }
+  .container { height: 597px }
 
-  .content_text.long_distance { top: 185px; }
+  .subImage { width: 275px }
+
+  .content_text.long_distance { top: 185px }
   
-  .content_text.mid_distance { top: 85px; }
+  .content_text.mid_distance { top: 85px }
   
-  .content_text.short_distance { top: 55px; }
+  .content_text.short_distance { top: 55px }
+
+  #hero_left_text > p:nth-child(1) {font-size: 72px }
+
+  #hero_left_text > p:nth-child(2) {font-size: 38px }
+
+  .menu_link { font-size: 40px }
 }
 
 @media screen and (max-width: 775px) {
@@ -394,12 +411,23 @@
   .content_img.long_distance { top: -85px }
   .content_img.mid_distance { top: -140px }
   .content_img.short_distance { top: -140px }
+  #hero_left_text > p:nth-child(1) { font-size: 65px }
+  #hero_left_text > p:nth-child(2) { font-size: 34px }
+  .menu_link { font-size: 36px }
 }
 
 @media screen and (max-width: 450px) {
-  .container { height: 580px }
+  .container { height: 550px }
+  .content_img.long_distance { top: -65px }
+  .content_img.mid_distance { top: -120px }
+  .content_img.short_distance { top: -120px }
+  #hero_left_text > p:nth-child(1) { font-size: 50px }
+  #hero_left_text > p:nth-child(2) { font-size: 25px }
+  .menu_link { font-size: 32px }
+  #menu { margin-left: 30% }
 }
 
 @media screen and (max-width: 350px) {
-  .container { height: 520px }
+  .container { height: 550px }
+  .menu_link { font-size: 29px }
 }

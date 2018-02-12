@@ -17,9 +17,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    store.dispatch(Action.setSize(document.body.clientWidth, document.body.offsetHeight))
+    store.dispatch(Action.setSize(document.body.offsetWidth, document.body.offsetHeight))
     window.onresize = function() {
-      store.dispatch(Action.setSize(document.body.clientWidth, document.body.offsetHeight))
+      store.dispatch(Action.setSize(document.body.offsetWidth, document.body.offsetHeight))
     }
 
     window.onscroll = (e) => {
