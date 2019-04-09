@@ -15,10 +15,12 @@ class Nav extends React.Component {
   }
 
   render() {
+    let style = {}
     let { width, height, scrollTop } = this.props.view
+    // 是否显示
     let vis = scrollTop>height-80?css.visible:css.invisible
     if (this.props.show) vis = css.visible
-    let style = {}
+    // nav 背景色
     if (this.props.background) style = {background: this.props.background}
     return (
       <nav id={css.nav} className={vis} style={style}>

@@ -4,13 +4,11 @@
   height:80px;
   top:0px;
   background: rgba(0,0,0,.87);
-  /* background: rgba(17,21,23,.9); */
   transition: transform .2s linear,background 1s ease,height .5s ease;
   padding:0 50px;
   box-sizing: border-box;
   z-index: 100;
   font-weight: 400;
-  font-style: normal;
 }
 
 #main {
@@ -20,6 +18,24 @@
   margin: 0 auto;
 }
 
+.visible {
+  transform: translateZ(0)
+}
+
+.invisible {
+  transform: translate3d(0, -100%, 0)
+}
+
+/* logo */
+#logo {
+  position: absolute;
+  left: 0px;
+  line-height: 80px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* list */
 #nav ul {
   overflow: hidden;
   position: absolute;
@@ -39,22 +55,6 @@
 #nav ul li a{
   color: #fff;
   cursor: pointer;
-}
-
-#logo {
-  position: absolute;
-  left: 0px;
-  line-height: 80px;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.visible {
-  transform: translateZ(0)
-}
-
-.invisible {
-  transform: translate3d(0, -100%, 0)
 }
 
 @media screen and (max-width: 775px) {

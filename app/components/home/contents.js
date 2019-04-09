@@ -88,6 +88,8 @@ export default [
     image: require('Image/10.png'),
     color: 'rgba(0,0,0,.87)',
     top: '210px',
-    topDistance: 'mid_distance'
+    topDistance: 'mid_distance',
+    bottomLink: '沪ICP备14031892号',
+    url: 'http://www.miit.gov.cn/'
   },
 ]

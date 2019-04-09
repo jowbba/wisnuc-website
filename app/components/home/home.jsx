@@ -1,8 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import store from '../../store/store'
-import Action from '../../action/action'
 import css from 'Css/home'
 import Content from './content'
 import Nav from '../common/nav'
@@ -23,9 +20,11 @@ class Home extends React.Component {
   }
 
   render() {
+    // size style for hero & video
     let { width, height } = this.props.view
     let contentStyle = { width, height }
     let videoStyle = width/height > 1920/1080? {width: '100%'}: {height: '100%'}
+    
     return (
       <div id={css.wrap}>
         {/* nav */}

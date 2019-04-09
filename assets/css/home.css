@@ -4,6 +4,8 @@
   width:100%;
   height:100%;
   position: relative;
+  /* 由于存在JS控制宽高的子元素，onResize存在先后更新，会导致scroll-x短暂出现 */
+  overflow: hidden; 
 }
 
 /* top bar */
@@ -298,8 +300,20 @@
   transform: translateY(0);
 }
 
+/* 备案号链接 */
+.bottomLink {
+  position: absolute!important;
+  width: 130px;
+  left: 50%;
+  bottom: 5px;
+  margin-left: -65px;
+}
 
+.bottomLink:link, .bottomLink:visited {
+  color: rgba(0,0,0,.46)
+}
 
+/* responsive */
 @media screen and (max-width: 1600px) {
   .title { font-size: 62px }
 

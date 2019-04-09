@@ -18,7 +18,7 @@ class Content extends React.Component {
 
   render() {
     let infor = this.props.infor
-    let { backgroundColor, color } = this.props.infor
+    let { backgroundColor, color } = infor
     let containerStyle = { backgroundColor, color }
     let splitLineStyle = this.props.index % 2 == 0? {backgroundColor:'#fff'}: {backgroundColor:'#000'}
     return (
@@ -40,6 +40,7 @@ class Content extends React.Component {
           {/* img in content */}
           <img className={css.content_img + ' ' + css[infor.topDistance]} src={infor.image}/>
         </div>
+        {infor.bottomLink && <a target='_blank' href={infor.url} className={css.bottomLink}>{infor.bottomLink}</a>}
       </section>
     )
   }
