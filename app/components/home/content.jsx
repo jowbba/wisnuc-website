@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import { connect } from 'react-redux'
 import css from 'Css/home'
+import { Link } from 'react-router-dom'
 
 class Content extends React.Component {
   constructor() {
@@ -40,7 +41,11 @@ class Content extends React.Component {
           {/* img in content */}
           <img className={css.content_img + ' ' + css[infor.topDistance]} src={infor.image}/>
         </div>
-        {infor.bottomLink && <a target='_blank' href={infor.url} className={css.bottomLink}>{infor.bottomLink}</a>}
+        <footer className={css.bottomLink}>
+          {infor.bottomLink && <a target='_blank' href={infor.url}>{infor.bottomLink}</a>}
+          {infor.license && <Link target='_blank' to={'/support'}>{infor.license}</Link>}
+        </footer>
+        
       </section>
     )
   }

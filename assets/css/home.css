@@ -303,13 +303,20 @@
 /* 备案号链接 */
 .bottomLink {
   position: absolute!important;
-  width: 130px;
   left: 50%;
   bottom: 5px;
   margin-left: -65px;
 }
 
-.bottomLink:link, .bottomLink:visited {
+.bottomLink a {
+  display: inline-block;
+}
+
+.bottomLink a:first-child{
+  margin-right: 5px;
+}
+
+.bottomLink a:link, .bottomLink a:visited {
   color: rgba(0,0,0,.46)
 }
 

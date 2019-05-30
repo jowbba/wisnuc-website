@@ -89,7 +89,8 @@ export default [
     color: 'rgba(0,0,0,.87)',
     top: '210px',
     topDistance: 'mid_distance',
-    bottomLink: '沪ICP备14031892号',
-    url: 'http://www.miit.gov.cn/'
+    bottomLink: '沪ICP备19016098号',
+    license: '用户协议',
+    url: 'http://www.miit.gov.cn/',
   },
 ]

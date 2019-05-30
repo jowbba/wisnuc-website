@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import Home from './components/home/home'
 import Download from './components/download/download'
 import Tutorial from './components/tutorial/tutorial.jsx'
+import Support from './components/support/support.jsx'
 import NoMatch from './components/nomatch/noMatch'
 import 'Font/font.css'
 import 'Css/index.css'
@@ -35,6 +36,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home}/>
           <Route path='/download' component={Download}/>
           <Route path='/tutorial' component={Tutorial}/>
+          <Route path='/' component={Support} />
           <Route component={NoMatch}/>
         </Switch>
       </div>

@@ -41,7 +41,6 @@ class Home extends React.Component {
             </video>
           </div>:null}
           
-          
           {/* hero left title*/}
           <div id={css.hero_item_left}>
             <div id={css.hero_left_text}>
