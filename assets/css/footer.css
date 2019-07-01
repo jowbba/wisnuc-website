@@ -1,0 +1,48 @@
+.container {
+    width: 100%;
+    background: #142030;
+    z-index: 100;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+.content > div:first-child {
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+.footer-top {
+    padding: 40px 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .54);
+    line-height: 1.5;
+}
+
+.footer-top > p {
+    max-width: 640px;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 13px;
+    color: rgba(255, 255, 255, .32);
+    line-height: 2;
+    padding: 21px 0 100px;
+}
+
+.footer-bottom > div {
+    max-width: 50%;
+}
+
+.footer-bottom-right > a {
+    color: rgba(255, 255, 255, .32);
+}
+

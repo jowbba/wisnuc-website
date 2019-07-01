@@ -5,6 +5,7 @@ import Content from './content'
 import Nav from '../common/nav'
 import contents from './contents'
 import NavbarMenu from '../common/navbarMenu'
+import Footer from '../common/footer'
 
 class Home extends React.Component {
   constructor() {
@@ -62,6 +63,7 @@ class Home extends React.Component {
         </div>
         {/* content */}
         {contents.map((item, index) => <Content infor={Object.assign({}, item, contentStyle)} key={index} index={index}/>)}
+        <Footer/>
       </div>
     )
   }

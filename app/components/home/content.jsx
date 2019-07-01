@@ -41,10 +41,10 @@ class Content extends React.Component {
           {/* img in content */}
           <img className={css.content_img + ' ' + css[infor.topDistance]} src={infor.image}/>
         </div>
-        <footer className={css.bottomLink}>
+        {/* <footer className={css.bottomLink}>
           {infor.bottomLink && <a target='_blank' href={infor.url}>{infor.bottomLink}</a>}
           {infor.license && <Link target='_blank' to={'/support'}>{infor.license}</Link>}
-        </footer>
+        </footer> */}
         
       </section>
     )
